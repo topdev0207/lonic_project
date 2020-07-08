@@ -1,0 +1,7 @@
+{
+  "name": "SCLA_App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
