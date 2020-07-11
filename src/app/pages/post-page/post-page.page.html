@@ -1,0 +1,32 @@
+
+
+<ion-content>
+  <div *ngIf = "userDetails">
+    <ion-input type = "button" (click) = "onLogout()">Logout</ion-input>
+
+    
+    <h1>Welcome {{userDetails.fullName}}</h1>
+    
+    <ion-button routerLink="/create-note" >
+      <ion-icon id = "createIcon" name="create"></ion-icon>
+      Add Note
+    </ion-button>
+    <div *ngIf = "userDetails.notes.length > 0">
+    <ion-card *ngFor = "let note of userDetails.notes" class="animate__animated animate__fadeInDown">
+
+      <ion-card-header>
+        <ion-card-subtitle>Date: {{note.date}}</ion-card-subtitle>
+        <ion-card-subtitle>Location: {{note.location}}</ion-card-subtitle>
+        <ion-card-title>{{note.title}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{note.description}}
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+
+  </div>
+</ion-content>

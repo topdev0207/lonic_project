@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>createNote</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup] = "form" (ngSubmit) = "createNote()" >
+    <ion-label id = "label" color="primary" stacked>Title</ion-label>
+    <ion-input formControlName = "title" name = "title" id = "input" required></ion-input>
+
+    <ion-label id = "label" color="primary" stacked>Description</ion-label>
+
+    <ion-textarea formControlName = "description" name = "description" placeholder="Add description here..." required></ion-textarea>
+
+    <ion-button type = "submit">Create Note</ion-button>
+  </form>
+</ion-content>

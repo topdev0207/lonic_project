@@ -1,25 +1,29 @@
 
 <ion-content>
 
-  <form>
-
+  <form #signUpForm="ngForm" (ngSubmit) = "onSubmit(signUpForm)">
     <ion-item>
       <ion-label color="primary" stacked>Full Name</ion-label>
-      <ion-input ></ion-input>
+      <ion-input  #fullName="ngModel" type = "text" name = "fullName"[(ngModel)] = "userService.selectedUser.fullName"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="primary" stacked>Email</ion-label>
-      <ion-input ></ion-input>
+      <ion-input #email="ngModel" type = "text" name = "email" [(ngModel)] = "userService.selectedUser.email" ></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label color="primary" stacked>Password</ion-label>
-      <ion-input ></ion-input>
+      <ion-input #password="ngModel" type = "password" name = "password" [(ngModel)] = "userService.selectedUser.password"></ion-input>
     </ion-item>
   
-    <ion-button>Sign Up</ion-button>
+    <ion-input type = "submit">Sign Up</ion-input>
 
   </form>
-  
+  <div *ngIf = "showSuccessMessage">
+    <h1>You have signed up.</h1>
+  </div>
+  <div *ngIf ="serverErrorMessages">
+    <h1> {{serverErrorMessages}}</h1>
+  </div>
 </ion-content>

@@ -1,7 +1,8 @@
 {
   "name": "SCLA_App",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

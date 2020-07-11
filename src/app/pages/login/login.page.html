@@ -1,12 +1,38 @@
 <ion-content>
-<ion-item>
-  <ion-label color="primary" stacked>Email</ion-label>
-  <ion-input type="email"></ion-input>
-</ion-item>
 
-<ion-item>
-  <ion-label color="primary" stacked>Password</ion-label>
-  <ion-input type="password"></ion-input>
-</ion-item>
-<a routerLink="signup">Don't have an account? Sign Up</a>
+  <form #signInForm = "ngForm" (ngSubmit) = "onSubmit(signInForm)">
+    <div id = "loginBanner">
+      <h1>Login</h1>
+    </div>
+    <ion-item>
+      <ion-label color="primary" stacked>Email</ion-label>
+      <ion-input type="email" name = "email" #email = "ngModel" [(ngModel)] = "model.email" [pattern] = "emailRegex" required></ion-input>
+
+      <div *ngIf = "signInForm.submitted && email.errors?.pattern">
+        <label>Invalid email address.</label> 
+      </div>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label color="primary" stacked>Password</ion-label>
+      <ion-input type = "password" name = "password" #password = "ngModel" [(ngModel)] = "model.password" required  minlength = "4"></ion-input>
+
+      <div *ngIf = "signInForm.submitted && password.errors?.minlength">
+        <div> Minimium 4 characters.</div>
+      </div>
+    
+
+    </ion-item>
+
+    <a routerLink="signup">Don't have an account? Sign Up</a>
+    <br>
+    <ion-input type = "submit">Login</ion-input>
+
+  </form>
+
+  <div *ngIf = "serverErrorMessages">
+    <h1>{{serverErrorMessages}}</h1>
+  </div>
 </ion-content>
