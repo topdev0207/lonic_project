@@ -1,9 +1,43 @@
-.ion-page{
-    display: block;
+.scroll-content {
+    padding-bottom: 0 !important;
 }
 
 #loginBanner{
-    widows: 100%;
-    background-color:#ede84c;
-    height: 40%;
+    background-color:rgb(246,198,0);
+    height: 300px;
+}
+
+h1{
+    padding-top:200px;
+    text-align: center;
+    font-size: 40px;
+}
+
+p{
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.input{
+    display: block;
+    margin: auto;
+    width:85%;
+    outline: 0;
+    border-width: 0 0 3px;
+    border-color: rgb(246,198,0);
+    box-sizing: border-box;
+    background-color: #E8E8E8;
+    height:50px;
+
+}
+
+#button{
+    display: block;
+    margin:auto;
+    background-color: rgb(246,198,0);
+    outline: 0;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
 }

@@ -1,1 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+#signout{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+#title{
+    color: rgb(246,198,0);
+}
+
+#addNote{
+    position:fixed;
+    bottom: 5%;
+    right:29%;
+    z-index: 2;
+    box-shadow:3px 3px 3px 3px #ccc;
+
+    
+}

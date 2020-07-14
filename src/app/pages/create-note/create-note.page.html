@@ -1,18 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>createNote</ion-title>
+    <ion-title>Create Note</ion-title>
+    <ion-icon routerLink="/post-page" id = "backArrow" name="arrow-back-outline"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
   <form [formGroup] = "form" (ngSubmit) = "createNote()" >
-    <ion-label id = "label" color="primary" stacked>Title</ion-label>
-    <ion-input formControlName = "title" name = "title" id = "input" required></ion-input>
+    <p id = "label" color="primary" stacked>Title</p>
+    <input formControlName = "title" name = "title" class = "input" required/>
 
-    <ion-label id = "label" color="primary" stacked>Description</ion-label>
+    <p color="primary">Description</p>
 
-    <ion-textarea formControlName = "description" name = "description" placeholder="Add description here..." required></ion-textarea>
+    <textarea class = "input" formControlName = "description" name = "description" placeholder="Add description here..." required></textarea>
 
-    <ion-button type = "submit">Create Note</ion-button>
+    <button class = "button" type = "submit">Create Note</button>
   </form>
 </ion-content>

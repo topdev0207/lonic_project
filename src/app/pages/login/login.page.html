@@ -1,34 +1,34 @@
 <ion-content>
 
+  <div id = "loginBanner">
+    <h1>Login</h1>
+  </div>
+
   <form #signInForm = "ngForm" (ngSubmit) = "onSubmit(signInForm)">
-    <div id = "loginBanner">
-      <h1>Login</h1>
-    </div>
-    <ion-item>
-      <ion-label color="primary" stacked>Email</ion-label>
-      <ion-input type="email" name = "email" #email = "ngModel" [(ngModel)] = "model.email" [pattern] = "emailRegex" required></ion-input>
+
+
+      <p color="primary" stacked>Email</p>
+
+      <input class = "input" type="email" name = "email" #email = "ngModel" [(ngModel)] = "model.email" [pattern] = "emailRegex" required/>
 
       <div *ngIf = "signInForm.submitted && email.errors?.pattern">
         <label>Invalid email address.</label> 
       </div>
 
-    </ion-item>
 
-    <ion-item>
 
-      <ion-label color="primary" stacked>Password</ion-label>
-      <ion-input type = "password" name = "password" #password = "ngModel" [(ngModel)] = "model.password" required  minlength = "4"></ion-input>
+
+      <p color="primary">Password</p>
+      <input class = "input" type = "password" name = "password" #password = "ngModel" [(ngModel)] = "model.password" required  minlength = "4"/>
 
       <div *ngIf = "signInForm.submitted && password.errors?.minlength">
-        <div> Minimium 4 characters.</div>
+        <label> Minimium 4 characters.</label>
       </div>
     
 
-    </ion-item>
-
-    <a routerLink="signup">Don't have an account? Sign Up</a>
+    <u><p routerLink="signup">Don't have an account? Sign Up</p></u>
     <br>
-    <ion-input type = "submit">Login</ion-input>
+    <input class = "button" type = "submit"/>
 
   </form>
 

@@ -1,23 +1,20 @@
 
 <ion-content>
-
+  <ion-icon routerLink="" id = "backArrow" name="arrow-back-outline"></ion-icon>
+  <h1> Sign Up</h1>
   <form #signUpForm="ngForm" (ngSubmit) = "onSubmit(signUpForm)">
-    <ion-item>
-      <ion-label color="primary" stacked>Full Name</ion-label>
-      <ion-input  #fullName="ngModel" type = "text" name = "fullName"[(ngModel)] = "userService.selectedUser.fullName"></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label color="primary" stacked>Email</ion-label>
-      <ion-input #email="ngModel" type = "text" name = "email" [(ngModel)] = "userService.selectedUser.email" ></ion-input>
-    </ion-item>
+    <p color="primary" stacked>Full Name</p>
+      <input  class = "input" #fullName="ngModel" type = "text" name = "fullName"[(ngModel)] = "userService.selectedUser.fullName"/>
+
+      <p color="primary" stacked>Email</p>
+      <input class = "input" #email="ngModel" type = "text" name = "email" [(ngModel)] = "userService.selectedUser.email" />
   
-    <ion-item>
-      <ion-label color="primary" stacked>Password</ion-label>
-      <ion-input #password="ngModel" type = "password" name = "password" [(ngModel)] = "userService.selectedUser.password"></ion-input>
-    </ion-item>
+      <p color="primary" stacked>Password</p>
+      <input class = "input" #password="ngModel" type = "password" name = "password" [(ngModel)] = "userService.selectedUser.password"/>
+
   
-    <ion-input type = "submit">Sign Up</ion-input>
+    <input class = "button" type = "submit"/>
 
   </form>
   <div *ngIf = "showSuccessMessage">

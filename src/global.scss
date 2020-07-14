@@ -17,6 +17,7 @@
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 /* Optional CSS utils that can be commented out */
 // @import "~@ionic/angular/css/padding.css";
@@ -31,3 +32,39 @@ h1{
 #createIcon {
     font-size: 30px;
 }
+
+
+p{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.input{
+    display: block;
+    margin: auto;
+    width:85%;
+    outline: 0;
+    border-width: 0 0 3px;
+    border-color: rgb(246,198,0);
+    box-sizing: border-box;
+    background-color: #E8E8E8;
+    height:50px;
+
+}
+
+.button{
+    display: block;
+    margin:auto;
+    background-color: rgb(246,198,0);
+    outline: 0;
+    border:none;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+

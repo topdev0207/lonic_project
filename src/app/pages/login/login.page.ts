@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm} from '@angular/forms';
 import { UserService } from '../../shared/user.service';
 import { Router } from '@angular/router';
+import { Platform } from '@ionic/angular';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -10,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private userService: UserService,private router:Router) { }
+  constructor(private userService: UserService,private router:Router) {}
   model = {
     email: '',
     password: ''

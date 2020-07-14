@@ -38,7 +38,6 @@ export class UserService {
     return this.http.get('http://localhost:8080/api/userProfile');
   }
   createNote(note){
-    console.log(note);
     return this.http.post('http://localhost:8080/api/postNote',note,this.noAuthHeader)
   }
   setToken(token:string){
