@@ -1,14 +1,11 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Create Note</ion-title>
+
     <ion-icon routerLink="/post-page" id = "backArrow" name="arrow-back-outline"></ion-icon>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content>
 
 
-  <form [formGroup] = "form" (ngSubmit) = "createNote()" >
+  <form [formGrouXp] = "form" (ngSubmit) = "createNote()" >
     <p id = "label" color="primary" stacked>Title</p>
     <input formControlName = "title" name = "title" class = "input" required/>
 
